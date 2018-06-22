@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.toy.pojo.Item" table="item" schema="toy">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="itemName" type="string">
+            <column name="item_name" length="100" not-null="true"/>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="100" not-null="true"/>
+        </property>
+        <property name="sellPoint" type="string">
+            <column name="sell_point" length="500"/>
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="price" not-null="true"/>
+        </property>
+        <property name="num" type="java.lang.Integer">
+            <column name="num" not-null="true"/>
+        </property>
+        <property name="image" type="java.lang.String">
+            <column name="image" length="500"/>
+        </property>
+        <property name="brand" type="java.lang.String">
+            <column name="brand" length="500"/>
+        </property>
+        <property name="image1" type="java.lang.String">
+            <column name="image1" length="500"/>
+        </property>
+        <property name="image2" type="java.lang.String">
+            <column name="image2" length="500"/>
+        </property>
+        <property name="fenlei" type="java.lang.String">
+            <column name="fenlei" length="500"/>
+        </property>
+    </class>
+</hibernate-mapping>

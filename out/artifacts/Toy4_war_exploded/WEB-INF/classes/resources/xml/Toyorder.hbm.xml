@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.toy.pojo.Toyorder" table="toyorder" schema="toy">
+        <id name="orderId" type="java.lang.String">
+            <column name="order_id" length="500"/>
+            <generator class="native"/>
+        </id>
+        <property name="username" type="java.lang.String" column="username"/>
+        <property name="payment" type="java.lang.String" column="payment"/>
+        <property name="paymentType" type="java.lang.String" column="payment_type"/>
+        <property name="status" type="java.lang.String" column="status"/>
+        <property name="createTime" type="java.util.Date" column="create_time"/>
+        <property name="paymentTime" type="java.util.Date" column="payment_time"/>
+        <property name="consignTime" type="java.util.Date" column="consign_time"/>
+        <property name="shippingName" type="java.lang.String" column="shipping_name"/>
+        <property name="shippingCode" type="java.lang.String" column="shipping_code"/>
+        <property name="image" type="java.lang.String" column="image"/>
+    </class>
+</hibernate-mapping>
